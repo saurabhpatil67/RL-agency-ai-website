@@ -1,17 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState } from 'react'
 import './App.css'
+import Navbar from './components/Navbar'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
+  const [theme, setTheme] = useState('light');
 
   return (
-    <>
-     <h1>Saurabh Nikam</h1>
-     <button>Click Me</button>
-     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolorum iste quod illo nisi officiis ex obcaecati eaque neque, mollitia nulla molestias iure accusamus quisquam nesciunt rem fuga repudiandae alias hic. Maxime, voluptatum eveniet.</p>
-    </>
+    <div className='dark:bg-black relative'>
+     <Navbar theme={theme} setTheme={setTheme}/>
+    </div>
   )
 }
 
